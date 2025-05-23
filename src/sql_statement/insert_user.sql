@@ -9,6 +9,7 @@ INSERT OR IGNORE INTO users (
     states,
     postcode,
     university, 
-    profession
+    profession,
+    password
 )
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);

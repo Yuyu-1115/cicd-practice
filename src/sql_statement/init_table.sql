@@ -18,6 +18,6 @@ CREATE TABLE IF NOT EXISTS users
     postcode   TEXT,
 
     university TEXT,
-    profession TEXT
-
+    profession TEXT,
+    password TEXT
 )
