@@ -14,14 +14,40 @@ steps:
     id: 'Push to Artifact Registry'
     waitFor: ['Build Docker Image']
 
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
+    args:
+      - run
+      - services
+      - update
+      - $_SERVICE_NAME
+      - '--platform=managed'
+      - >-
+        --image=$_AR_HOSTNAME/$_AR_PROJECT_ID/$_AR_REPOSITORY/$_ARTIFACT_REGISTRY_REPO/$_SERVICE_NAME:$COMMIT_SHA
+      - >-
+        --labels=managed-by=gcp-cloud-build-deploy-cloud-run,commit-sha=$COMMIT_SHA,gcb-build-id=$BUILD_ID,gcb-trigger-id=$_TRIGGER_ID
+      - '--region=$_DEPLOY_REGION'
+      - '--quiet'
+    id: Deploy
+    entrypoint: gcloud
+    waitFor: ["Push to Artifact Registry"]
+
 images:
   - '${_ARTIFACT_REGISTRY_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_ARTIFACT_REGISTRY_REPO}/${_SERVICE_NAME}:$COMMIT_SHA'
 
 substitutions:
-  _SERVICE_NAME: 'vul-webapp'
-  _ARTIFACT_REGISTRY_LOCATION: 'asia-east1'
-  _ARTIFACT_REGISTRY_REPO: 'cicd-practice'
-  _CLOUD_RUN_REGION: 'asia-east1'
+  _SERVICE_NAME: vul-webapp
+  _ARTIFACT_REGISTRY_LOCATION: asia-east1
+  _ARTIFACT_REGISTRY_REPO: cicd-practice
+
+  _CLOUD_RUN_REGION: asia-east1
+
+  _AR_REPOSITORY: cloud-run-source-deploy
+  _AR_PROJECT_ID: cicd-demo-460715
+  _AR_HOSTNAME: asia-east1-docker.pkg.dev
+
+  _TRIGGER_ID: de6e9b90-1d3e-468f-9832-e5c5a9f0575c
+  _PLATFORM: managed
+  _DEPLOY_REGION: asia-east1
 
 options:
   logging: CLOUD_LOGGING_ONLY
