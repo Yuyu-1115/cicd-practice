@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64cd1166-b024-41cd-b6de-6f0042e5f390" name="Changes" comment="An attempt to use scan, modify config" />
+    <list default="true" id="64cd1166-b024-41cd-b6de-6f0042e5f390" name="Changes" comment="Try to fix step 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,7 +139,7 @@
       <workItem from="1747916825850" duration="235000" />
       <workItem from="1747917066506" duration="140000" />
       <workItem from="1747917211925" duration="41643000" />
-      <workItem from="1748094067615" duration="11395000" />
+      <workItem from="1748094067615" duration="11913000" />
     </task>
     <task id="LOCAL-00001" summary="Add a login page, and store password now">
       <option name="closed" value="true" />
@@ -258,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748113692267</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Try to fix step 2">
+      <option name="closed" value="true" />
+      <created>1748114237260</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1748114237260</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +288,8 @@
     <MESSAGE value="forget to replace the placeholder" />
     <MESSAGE value="An attempt to use scan" />
     <MESSAGE value="An attempt to use scan, modify config" />
-    <option name="LAST_COMMIT_MESSAGE" value="An attempt to use scan, modify config" />
+    <MESSAGE value="Try to fix step 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Try to fix step 2" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/smallwebApp$smallwebApp.coverage" NAME="smallwebApp Coverage Results" MODIFIED="1748098462617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />

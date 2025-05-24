@@ -10,11 +10,9 @@ steps:
         --config p/flask \
         --json --json-output semgrep-results.json
         
-        SEMGREP_EXIT_CODE=$? 
-        
         set -eo pipefail
         
-        if [ $SEMGREP_EXIT_CODE -ne 0 ]; then
+        if [ $? -ne 0 ]; then
           echo "Semgrep found vulnerabilities! Check the results for more infos."
           exit 1
         else
