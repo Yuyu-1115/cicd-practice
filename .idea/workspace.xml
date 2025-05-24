@@ -139,7 +139,7 @@
       <workItem from="1747916825850" duration="235000" />
       <workItem from="1747917066506" duration="140000" />
       <workItem from="1747917211925" duration="41643000" />
-      <workItem from="1748094067615" duration="7301000" />
+      <workItem from="1748094067615" duration="10031000" />
     </task>
     <task id="LOCAL-00001" summary="Add a login page, and store password now">
       <option name="closed" value="true" />
@@ -213,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748102255179</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update cloudbuild.yaml">
+      <option name="closed" value="true" />
+      <created>1748102540085</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1748102540085</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,4 +1,30 @@
 steps:
+  - name: 'semgrep/semgrep'
+    entrypoint: 'sh'
+    args:
+      - '-c'
+      - |
+        semgrep ci \
+        --config auto \
+        --config p/python \
+        --config p/flask \
+        --config p/jinja2 \
+        --json --json-output semgrep-results.json
+        set -eo pipefail
+        
+        if [ $? -ne 0 ]; then
+        echo "Semgrep found vulnerabilities! Check the results for more infos."
+        exit 1
+        else
+        echo "Semgrep scan completed successfully with no findings."
+        fi
+    id: 'Semgrep Scan'
+
+  - name: 'gcr.io/cloud-builders/gsutil'
+    args: ['cp', 'semgrep-results.json', 'gs://your-semgrep-results-bucket/semgrep-findings/$BUILD_ID/semgrep-results.json']
+    id: 'upload-results'
+    waitFor: ['Semgrep Scan']
+
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'build'
