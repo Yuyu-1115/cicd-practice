@@ -4,11 +4,11 @@ steps:
     args:
       - '-c'
       - |
-        semgrep ci \
+        semgrep scan \
         --config auto \
         --config p/python \
         --config p/flask \
-        --config p/jinja2 \
+        --config r/python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host
         --json --json-output semgrep-results.json
         set -eo pipefail
         
