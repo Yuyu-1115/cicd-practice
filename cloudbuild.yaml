@@ -4,7 +4,7 @@ steps:
     args:
       - '-c'
       - |
-        semgrep scan \
+        semgrep ci \
         --config auto \
         --config p/python \
         --config p/flask \
@@ -20,8 +20,8 @@ steps:
     id: 'Semgrep Scan'
 
   - name: 'gcr.io/cloud-builders/gsutil'
-    args: ['cp', 'semgrep-results.json', 'gs://cicd-practice-semgrep/semgrep-findings/$BUILD_ID/semgrep-results.json']
-    id: 'upload-results'
+    args: ['cp', 'semgrep-results.json', 'gs://cicd-practice-semgrep/semgrep-findings/$BUILD_ID/{$COMMIT_SHA}-semgrep-results.json']
+    id: 'Upload Result'
     waitFor: ['Semgrep Scan']
 
   - name: 'gcr.io/cloud-builders/docker'
@@ -31,6 +31,7 @@ steps:
       - '${_ARTIFACT_REGISTRY_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_ARTIFACT_REGISTRY_REPO}/${_SERVICE_NAME}:$COMMIT_SHA'
       - '.'
     id: 'Build Docker Image'
+    waitFor: ['Upload Result']
 
   - name: 'gcr.io/cloud-builders/docker'
     args:
