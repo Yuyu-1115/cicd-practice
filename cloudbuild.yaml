@@ -36,3 +36,6 @@ substitutions:
   _ARTIFACT_REGISTRY_LOCATION: 'asia-east1'
   _ARTIFACT_REGISTRY_REPO: 'cicd-practice'
   _CLOUD_RUN_REGION: 'asia-east1'
+
+options:
+  logging: CLOUD_LOGGING_ONLY

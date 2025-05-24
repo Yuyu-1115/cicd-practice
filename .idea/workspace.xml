@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64cd1166-b024-41cd-b6de-6f0042e5f390" name="Changes" comment="Add a login page, and store password now">
-      <change afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/90be8fbb-5c91-4a3d-a81e-59735582f709.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/90be8fbb-5c91-4a3d-a81e-59735582f709/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +139,7 @@
       <workItem from="1747916825850" duration="235000" />
       <workItem from="1747917066506" duration="140000" />
       <workItem from="1747917211925" duration="41643000" />
-      <workItem from="1748094067615" duration="1415000" />
+      <workItem from="1748094067615" duration="1925000" />
     </task>
     <task id="LOCAL-00001" summary="Add a login page, and store password now">
       <option name="closed" value="true" />
@@ -151,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748014233391</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add a login page, and store password now">
+      <option name="closed" value="true" />
+      <created>1748095705533</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748095705533</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
