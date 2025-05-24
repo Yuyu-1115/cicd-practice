@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64cd1166-b024-41cd-b6de-6f0042e5f390" name="Changes" comment="Update cloudbuild.yaml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="64cd1166-b024-41cd-b6de-6f0042e5f390" name="Changes" comment="Update cloudbuild.yaml to include semgrep scan">
       <change beforePath="$PROJECT_DIR$/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +138,7 @@
       <workItem from="1747916825850" duration="235000" />
       <workItem from="1747917066506" duration="140000" />
       <workItem from="1747917211925" duration="41643000" />
-      <workItem from="1748094067615" duration="10031000" />
+      <workItem from="1748094067615" duration="10214000" />
     </task>
     <task id="LOCAL-00001" summary="Add a login page, and store password now">
       <option name="closed" value="true" />
@@ -221,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748102540085</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update cloudbuild.yaml to include semgrep scan">
+      <option name="closed" value="true" />
+      <created>1748112532809</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1748112532809</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +243,8 @@
     <MESSAGE value="Forget to add db to git" />
     <MESSAGE value="Was wrong about Dockerfile" />
     <MESSAGE value="Update cloudbuild.yaml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update cloudbuild.yaml" />
+    <MESSAGE value="Update cloudbuild.yaml to include semgrep scan" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update cloudbuild.yaml to include semgrep scan" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/smallwebApp$smallwebApp.coverage" NAME="smallwebApp Coverage Results" MODIFIED="1748098462617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
